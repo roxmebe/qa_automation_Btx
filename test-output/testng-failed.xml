@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Testing]">
+  <test thread-count="5" name="SearchPage(failed)">
+    <classes>
+      <class name="TestEclipse.TestSearch.RunnerTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="test"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- TestEclipse.TestSearch.RunnerTest -->
+    </classes>
+  </test> <!-- SearchPage(failed) -->
+</suite> <!-- Failed suite [Testing] -->
