@@ -34,8 +34,8 @@ public class RunnerTest {
 			WebElement web_Element_Hovered = driver.findElement(By.xpath("//*[@class='srp-controls__control--legacy']"));
 			Actions builder = new Actions(driver);
 			builder.moveToElement(web_Element_Hovered).build().perform();
-			driver.findElement(By.xpath("//*[(//li[@class='btn'])[2]]")).click();
-	
+			driver.findElement(By.xpath("(//li[@class='btn'])[3]")).click();
+			waitForPageLoaded();
 		}
 		
 		public void getVisibility(By locator, int timeout) {
