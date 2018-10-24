@@ -5,15 +5,11 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,14 +25,8 @@ public class RunnerTest {
 			driver.findElement(By.id("gh-btn")).click();
 			waitForPageLoaded();
 			driver.findElement(By.id("w3-w0-w2-w2-0[0]")).sendKeys("puma");
-			
-			//JavascriptExecutor jsExec = (JavascriptExecutor) driver;
-			//jsExec.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.className("x-searchable-list__fieldset x-refine__main__value")));
-			//jsExec.executeScript("document.getElementsByClassName('x-searchable-list__fieldset x-refine__main__value').scrollTop = 100");
-			//driver.findElement(By.id(""))
 			driver.findElement(By.xpath("//*[@aria-label='PUMA' and @type='checkbox']")).click();
 			waitForPageLoaded();
-			//getVisibility(By.xpath("//*[@aria-label='New' and @type='checkbox']"),10);
 			clickElementWhenClickable(By.xpath("//*[@aria-label='Nuevo' and @type='checkbox']"),40);
 			//driver.findElement(By.xpath("//*[@aria-label='New' and @type='checkbox']")).click();
 			waitForPageLoaded();
@@ -44,8 +34,8 @@ public class RunnerTest {
 			WebElement web_Element_Hovered = driver.findElement(By.xpath("//*[@class='srp-controls__control--legacy']"));
 			Actions builder = new Actions(driver);
 			builder.moveToElement(web_Element_Hovered).build().perform();
-			//driver.findElement(By.xpath("//*[(//li[@class='btn'])[2]]")).click();
-					
+			driver.findElement(By.xpath("//*[(//li[@class='btn'])[2]]")).click();
+	
 		}
 		
 		public void getVisibility(By locator, int timeout) {
